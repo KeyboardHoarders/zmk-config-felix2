@@ -1,16 +1,19 @@
 /*
  * ZMK Studio requires the keyboard to expose a physical layout with a `keys`
- * property and NOT to have a `chosen zmk,matrix-transform`. The upstream Helix
- * shield predates Studio, so we add a physical layout here on the central
- * (left) half and retarget the chosen node accordingly.
+ * property, and it must NOT have `chosen zmk,matrix-transform`. The upstream
+ * Helix shield (helix.dtsi) sets that chosen property, so we blow the whole
+ * chosen node away and rebuild it here on the central (left) half only.
  */
 
 #include <physical_layouts.dtsi>
 
 / {
+    /delete-node/ chosen;
+
     chosen {
-        /delete-property/ zmk,matrix-transform;
+        zmk,kscan = &kscan0;
         zmk,physical-layout = &helix_physical_layout;
+        zephyr,display = &nice_view;
     };
 
     helix_physical_layout: helix_physical_layout {
