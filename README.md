@@ -1,4 +1,5 @@
 ## Store keyboardhoarders.com
 
 ## Keymap:
-<img width="900" height="1736" alt="my_keymap-12" src="https://github.com/user-attachments/assets/b9d5791d-e410-436b-9f2c-df1d9e04f88c" />
+<img width="900" height="1736" alt="my_keymap-14" src="https://github.com/user-attachments/assets/275c3e22-dc8a-4709-ae0e-86d9a013ab2e" />
+
